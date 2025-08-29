@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استثمر في مستقبل الشحن - شركة الخليج للشحن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap");
+        
+        body {
+            font-family: "Cairo", sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.8); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="bg-white p-3 rounded-full">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold">شركة النقل السريع</h1>
+                </div>
+                <div class="text-sm">
+                    <span class="bg-green-500 px-3 py-1 rounded-full">قريباً</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="animate-float mb-8">
+                <svg class="w-24 h-24 mx-auto text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                </svg>
+            </div>
+            <h2 class="text-5xl font-black mb-6">فرصة استثمارية ذهبية</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                استثمر في شركة النقل السريع التي تركز على السوق اليمني بنسبة 90% مع تقنيات حديثة ومتطورة تشمل تطبيق العملاء وأنظمة إدارية متكاملة
+            </p>
+            <button onclick="showInvestmentForm()" class="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-full text-xl font-bold transition-all duration-300 pulse-glow">
+                استثمر الآن 💰
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">لماذا تستثمر معنا؟</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-2xl card-shadow bg-gradient-to-br from-blue-50 to-blue-100">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-800">تقنيات متطورة</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        تطبيق عملاء متطور لتتبع الشحنات ونظام إداري متكامل وتطبيق خاص لمندوبي التوصيل
+                    </p>
+                </div>
+
+                <div class="text-center p-8 rounded-2xl card-shadow bg-gradient-to-br from-green-50 to-green-100">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-800">السوق اليمني</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        تركيز 90% على السوق المحلي اليمني مع فرص نمو هائلة وعوائد مجزية
+                    </p>
+                </div>
+
+                <div class="text-center p-8 rounded-2xl card-shadow bg-gradient-to-br from-purple-50 to-purple-100">
+                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-800">فريق خبير</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        فريق إدارة محترف بخبرة تزيد عن 15 عاماً في مجال الشحن والتجارة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800">التقنيات المتطورة</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-2xl card-shadow bg-gradient-to-br from-indigo-50 to-indigo-100">
+                    <div class="bg-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 3H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7V5h10v14z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-800">تطبيق العملاء</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        تطبيق ذكي لإنشاء وتتبع الشحنات مع إشعارات فورية وواجهة سهلة الاستخدام
+                    </p>
+                </div>
+
+                <div class="text-center p-8 rounded-2xl card-shadow bg-gradient-to-br from-orange-50 to-orange-100">
+                    <div class="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-800">نظام إداري متكامل</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        لوحة تحكم شاملة لإدارة العمليات والمالية والتقارير والموظفين
+                    </p>
+                </div>
+
+                <div class="text-center p-8 rounded-2xl card-shadow bg-gradient-to-br from-teal-50 to-teal-100">
+                    <div class="bg-teal-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gray-800">تطبيق المندوبين</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        تطبيق خاص بمندوبي التوصيل لتحسين الكفاءة وتتبع الأداء
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Packages -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-8 text-gray-800">فئات الاستثمار</h3>
+            <div class="text-center mb-16">
+                <div class="bg-blue-50 p-6 rounded-xl max-w-4xl mx-auto">
+                    <h4 class="text-2xl font-bold mb-4 text-blue-800">رأس المال: مليون ريال سعودي</h4>
+                    <p class="text-lg text-gray-700 mb-2">100 سهم متاح للاستثمار مقابل 75% من القيمة السوقية للشركة</p>
+                    <p class="text-md text-gray-600">تقارير ربع سنوية (كل 3 أشهر) لجميع المستثمرين</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl card-shadow">
+                    <div class="text-center">
+                        <h4 class="text-2xl font-bold mb-4 text-blue-600">الباقة الأساسية</h4>
+                        <div class="text-4xl font-black mb-6 text-gray-800">10,000 ريال</div>
+                        <div class="text-lg mb-6 text-gray-600">سهم واحد (1%)</div>
+                        <ul class="text-right space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                حصة 1% من الأرباح
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                تقارير ربع سنوية
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                دعم فني
+                            </li>
+                        </ul>
+                        <button onclick="selectPackage("basic")" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-bold transition-all duration-300">
+                            اختر هذه الباقة
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl card-shadow border-4 border-green-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-500 text-white px-6 py-2 rounded-full text-sm font-bold">الأكثر شعبية</span>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-2xl font-bold mb-4 text-green-600">الباقة المتقدمة</h4>
+                        <div class="text-4xl font-black mb-6 text-gray-800">50,000 ريال</div>
+                        <div class="text-lg mb-6 text-gray-600">5 أسهم (5%)</div>
+                        <ul class="text-right space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                حصة 5% من الأرباح
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                تقارير ربع سنوية
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                مشاركة في القرارات
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                دعم مخصص
+                            </li>
+                        </ul>
+                        <button onclick="selectPackage("advanced")" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold transition-all duration-300">
+                            اختر هذه الباقة
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl card-shadow">
+                    <div class="text-center">
+                        <h4 class="text-2xl font-bold mb-4 text-purple-600">الباقة المميزة</h4>
+                        <div class="text-4xl font-black mb-6 text-gray-800">100,000 ريال</div>
+                        <div class="text-lg mb-6 text-gray-600">10 أسهم (10%)</div>
+                        <ul class="text-right space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                حصة 10% من الأرباح
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                عضوية مجلس الإدارة
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                تقارير ربع سنوية
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                دعم مخصص
+                            </li>
+                        </ul>
+                        <button onclick="selectPackage("premium")" class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-lg font-bold transition-all duration-300">
+                            اختر هذه الباقة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="investment-form" class="py-20 bg-white hidden">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-800">نموذج الاستثمار</h3>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl card-shadow">
+                <form id="contact-form" action="https://formspree.io/f/myyrqgje" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-gray-700">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-gray-700">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-lg font-medium text-gray-700">رقم الهاتف (مع رمز الدولة)</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="package" class="block text-lg font-medium text-gray-700">الباقة المختارة</label>
+                        <input type="text" id="package" name="package" readonly class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm bg-gray-100 text-lg">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-gray-700">رسالة إضافية (اختياري)</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md text-lg font-bold transition-all duration-300">
+                        إرسال طلب الاستثمار
+                    </button>
+                </form>
+                <div id="form-message" class="mt-6 text-center text-lg font-medium hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 شركة النقل السريع. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showInvestmentForm() {
+            document.getElementById("investment-form").classList.remove("hidden");
+            document.getElementById("investment-form").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function selectPackage(packageName) {
+            let packageInput = document.getElementById("package");
+            if (packageName === "basic") {
+                packageInput.value = "الباقة الأساسية";
+            } else if (packageName === "advanced") {
+                packageInput.value = "الباقة المتقدمة";
+            } else if (packageName === "premium") {
+                packageInput.value = "الباقة المميزة";
+            }
+            showInvestmentForm();
+      const form = document.getElementById("investment-form");addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let form = event.target;
+            let data = new FormData(form);
+            let formMessage = document.getElementById("form-message");
+
+            formMessage.classList.remove("hidden", "text-green-600", "text-red-600");
+            formMessage.classList.add("text-gray-600");
+            formMessage.textContent = "جاري الإرسال...";
+
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    "Accept": "application/json"
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formMessage.classList.remove("text-gray-600");
+                    formMessage.classList.add("text-green-600");
+                    formMessage.textContent = "تم إرسال طلبك بنجاح! سنتواصل معك قريباً.";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, "errors")) {
+                            formMessage.textContent = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            formMessage.textContent = "عفواً! حدث خطأ أثناء إرسال النموذج.";
+                        }
+                    })
+                }
+            }).catch(error => {
+                formMessage.classList.remove("text-gray-600");
+                formMessage.classList.add("text-red-600");
+                formMessage.textContent = "عفواً! حدث خطأ أثناء إرسال النموذج.";
+            });
+        });
+    </script>
+</body>
+</html>
+
